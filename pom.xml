@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.github.myzhan</groupId>
             <artifactId>locust4j</artifactId>
-            <version>1.0.3</version>
+            <version>LATEST</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
