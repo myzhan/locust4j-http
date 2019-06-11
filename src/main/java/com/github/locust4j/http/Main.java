@@ -17,7 +17,9 @@ public class Main {
         } catch (Exception ex) {
             ex.printStackTrace();
             System.out.println("Failed to initialize GlobalConfiguration, will exit now.");
+            System.exit(1);
         }
+
         Locust locust = Locust.getInstance();
         locust.setMasterHost(GlobalConfiguration.getMasterHost());
         locust.setMasterPort(GlobalConfiguration.getMasterPort());
