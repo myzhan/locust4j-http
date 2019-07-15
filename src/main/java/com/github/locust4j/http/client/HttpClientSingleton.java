@@ -6,7 +6,6 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class HttpClientSingleton {
 
@@ -32,9 +31,7 @@ public class HttpClientSingleton {
             connMgr.setDefaultMaxPerRoute(1024);
             builder.setConnectionManager(connMgr);
 
-            CloseableHttpClient httpclient = builder.build();
-
-            return httpclient;
+            return builder.build();
         }
     }
 }

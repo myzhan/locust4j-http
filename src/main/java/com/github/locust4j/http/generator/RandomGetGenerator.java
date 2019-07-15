@@ -8,14 +8,12 @@ import org.apache.http.client.methods.HttpUriRequest;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class RandomGetGenerator extends BaseRequestGenerator {
 
     @Override
     public HttpUriRequest getRequest() {
         String uuid = UUID.randomUUID().toString();
-        HttpGet request = new HttpGet(GlobalConfiguration.getTestURL() + uuid);
-        return request;
+        return new HttpGet(GlobalConfiguration.getTestURL() + uuid);
     }
 }

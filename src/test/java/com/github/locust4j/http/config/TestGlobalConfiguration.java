@@ -3,12 +3,12 @@ package com.github.locust4j.http.config;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class TestGlobalConfiguration {
 
@@ -24,11 +24,11 @@ public class TestGlobalConfiguration {
         args.add("-testURL");
         args.add("localhost:8080");
 
-        GlobalConfiguration.init(args.toArray(new String[args.size()]));
+        GlobalConfiguration.init(args.toArray(new String[0]));
 
-        Assert.assertEquals(GlobalConfiguration.getMasterHost(), "192.168.1.1");
-        Assert.assertEquals(GlobalConfiguration.getMasterPort(), 10000);
-        Assert.assertEquals(GlobalConfiguration.getMaxRPS(), 200);
-        Assert.assertEquals(GlobalConfiguration.getTestURL(), "localhost:8080");
+        assertEquals(GlobalConfiguration.getMasterHost(), "192.168.1.1");
+        assertEquals(GlobalConfiguration.getMasterPort(), 10000);
+        assertEquals(GlobalConfiguration.getMaxRPS(), 200);
+        assertEquals(GlobalConfiguration.getTestURL(), "localhost:8080");
     }
 }

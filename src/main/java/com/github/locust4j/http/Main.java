@@ -7,7 +7,6 @@ import com.github.myzhan.locust4j.Locust;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class Main {
 
@@ -30,9 +29,9 @@ public class Main {
         }
 
         HttpTaskBuilder builder = new HttpTaskBuilder();
-        builder.setWeight(10);
-        builder.setName("http");
-        builder.setRequestGenerator(new RandomPostGenerator());
+        builder.setWeight(10)
+            .setName("http")
+            .setRequestGenerator(new RandomPostGenerator());
         locust.run(builder.build());
     }
 }
