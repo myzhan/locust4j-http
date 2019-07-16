@@ -7,7 +7,6 @@ import org.apache.commons.cli.Options;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class GlobalConfiguration {
 
@@ -52,10 +51,10 @@ public class GlobalConfiguration {
             GlobalConfiguration.setMasterHost(cmd.getOptionValue("masterHost"));
         }
         if (cmd.hasOption("masterPort")) {
-            GlobalConfiguration.setMasterPort(Integer.valueOf(cmd.getOptionValue("masterPort")).intValue());
+            GlobalConfiguration.setMasterPort(Integer.valueOf(cmd.getOptionValue("masterPort")));
         }
         if (cmd.hasOption("maxRPS")) {
-            GlobalConfiguration.setMaxRPS(Integer.valueOf(cmd.getOptionValue("maxRPS")).intValue());
+            GlobalConfiguration.setMaxRPS(Integer.valueOf(cmd.getOptionValue("maxRPS")));
         }
         if (cmd.hasOption("testURL")) {
             GlobalConfiguration.setTestURL(cmd.getOptionValue("testURL"));

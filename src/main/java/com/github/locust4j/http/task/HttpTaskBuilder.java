@@ -4,11 +4,10 @@ import com.github.locust4j.http.generator.BaseRequestGenerator;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class HttpTaskBuilder {
 
-    private HttpTask httpTask;
+    private final HttpTask httpTask;
 
     public HttpTaskBuilder() {
         httpTask = new HttpTask();

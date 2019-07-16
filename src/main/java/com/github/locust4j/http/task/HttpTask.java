@@ -12,14 +12,13 @@ import org.apache.http.util.EntityUtils;
 
 /**
  * @author myzhan
- * @date 2018/11/02
  */
 public class HttpTask extends AbstractTask {
 
     private int weight = 10;
     private String name = "http";
 
-    private CloseableHttpClient httpClient;
+    private final CloseableHttpClient httpClient;
     private BaseRequestGenerator requestGenerator;
 
     protected HttpTask() {
